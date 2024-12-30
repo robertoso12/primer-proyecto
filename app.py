@@ -5,6 +5,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import os
 from reportlab.pdfgen import canvas
 from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory
+import os
+print(f"Ruta absoluta de templates: {os.path.abspath('templates')}")
 
 
 app = Flask(__name__)
