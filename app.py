@@ -265,4 +265,8 @@ def ver_pagos():
     return render_template('ver_pagos.html', pagos=pagos)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import os
+
+port = int(os.environ.get("PORT", 5000))  # Usa el puerto de Render o el 5000 por defecto
+app.run(host="0.0.0.0", port=port)
+
